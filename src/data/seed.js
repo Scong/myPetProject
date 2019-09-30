@@ -29,7 +29,7 @@ const fillAnimals = () => {
       id: genId(),
       name: faker.name.firstName(),
       classification: faker.random.arrayElement(AnimalClassifications),
-      age: faker.random.number(),
+      age: faker.random.number({min: 0, max: 10}),
       owner_id: faker.random.arrayElement(ownerIds.concat([undefined, undefined, undefined]))
     })
   }
